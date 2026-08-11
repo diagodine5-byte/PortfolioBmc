@@ -2,12 +2,12 @@ import { About, Gallery, Home, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Samba Kéba",
-  lastName: "Ba",
-  name: `Samba Kéba Ba`,
-  role: "Développeur BI",
+  firstName: "Baba Mamadou",
+  lastName: "Camara",
+  name: `Baba Mamadou Camara`,
+  role: "Analyste de données",
   avatar: "/PortfolioBmc/images/avatar.jpg",
-  email: "bpanopi@gmail.com",
+  email: "diagodine5@gmail.com",
   location: "America/Montreal", // IANA tz valide — Québec (heure de l'Est)
   languages: ["Français", "Anglais"],
   locale: "fr",
@@ -17,13 +17,7 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/SambaKebaBa",
-    essential: true,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/in/sambak%C3%A9baba",
+    link: "https://github.com/diagodine5-byte",
     essential: true,
   },
   {
@@ -56,7 +50,7 @@ const home: Home = {
   },
   subline: (
     <>
-      Je suis {person.firstName}, développeur BI. Je conçois des rapports Power BI de bout en bout, <br /> de la donnée brute jusqu'à la décision.
+      Je suis {person.firstName}, {person.role.toLowerCase()}. Je conçois des rapports Power BI de bout en bout, <br /> de la donnée brute jusqu'à la décision.
     </>
   ),
 };
