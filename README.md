@@ -18,9 +18,9 @@ npm run build    # export statique -> ./out
 Déploiement **automatique** sur GitHub Pages via `.github/workflows/deploy.yml` à chaque push sur `main` (~1-2 min).
 Réglage requis une fois : **Settings → Pages → Source = GitHub Actions**.
 
-> En local, les images peuvent sembler cassées : leur chemin est préfixé `/Portfolio` (nom du repo).
+> En local, les images peuvent sembler cassées : leur chemin est préfixé `/PortfolioBmc` (nom du repo).
 > C'est normal, elles s'affichent bien sur l'URL GitHub Pages. Si tu **renommes le repo**, remplace
-> `/Portfolio/` par le nouveau nom dans `content.tsx` et les `.mdx`.
+> `/PortfolioBmc/` par le nouveau nom dans `content.tsx` et les `.mdx`.
 
 ---
 
@@ -87,7 +87,7 @@ title: "Titre complet du rapport"
 publishedAt: "2025-07-01"
 summary: "Résumé court affiché sur la carte."
 images:
-  - "/Portfolio/images/rapports/Mon nouveau rapport.png"
+  - "/PortfolioBmc/images/rapports/Mon nouveau rapport.png"
 tag: "Power BI"
 link: "LIEN_PUBLISH_TO_WEB"
 ---
@@ -103,11 +103,11 @@ Description en un ou deux paragraphes.
 
 Pour une **vidéo** au lieu d'un rapport public (write-back), remplace l'iframe par :
 ```mdx
-<video controls playsInline style={{width:'100%',borderRadius:12}} src="/Portfolio/videos/Ma video.mp4"></video>
+<video controls playsInline style={{width:'100%',borderRadius:12}} src="/PortfolioBmc/videos/Ma video.mp4"></video>
 ```
 
 ### Règles importantes
-- **Chemins** : toujours préfixer `/Portfolio/...` (sinon 404 sur GitHub Pages).
+- **Chemins** : toujours préfixer `/PortfolioBmc/...` (sinon 404 sur GitHub Pages).
 - **`publishedAt`** : `AAAA-MM-JJ`. Le plus récent passe en premier (et en vedette sur l'accueil).
 - **JSX dans MDX** : `style={{...}}` (accolades), `allowFullScreen` / `strokeWidth` en camelCase.
 - Enregistrer en **UTF-8** (accents).
@@ -124,7 +124,7 @@ Dans `src/resources/content.tsx`, section `about.certifications.items`, ajoute u
   issuer: "IBM · Coursera",
   date: "Mois AAAA",
   link: "https://coursera.org/verify/XXXX",
-  image: "/Portfolio/images/certifications/Nom complet de la certification.jpg",
+  image: "/PortfolioBmc/images/certifications/Nom complet de la certification.jpg",
 },
 ```
 

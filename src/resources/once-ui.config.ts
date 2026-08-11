@@ -12,7 +12,7 @@ import {
 import { home, person, social } from "./content";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://sambakebaba.github.io";
+const baseURL: string = "https://diagodine5-byte.github.io";
 
 const routes: RoutesConfig = {
   "/": true,
