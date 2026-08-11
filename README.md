@@ -3,7 +3,7 @@
 Portfolio personnel de **Samba Kéba Ba**, développeur BI (Power BI, Databricks, Microsoft Fabric).
 Application Next.js exportée en statique, hébergée sur GitHub Pages.
 
-**En ligne :** https://sambakebaba.github.io/Portfolio/
+**En ligne :** https://diagodine5-byte.github.io/PortfolioBmc/
 
 ---
 
