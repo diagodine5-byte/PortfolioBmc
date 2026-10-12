@@ -193,8 +193,10 @@ export interface About extends BasePageConfig {
       name: string;
       issuer: string;
       date: string;
-      link: string;
-      image: string;
+      /** Lien de vérification public, si le certificat en propose un */
+      link?: string;
+      /** Visuel du certificat, si disponible */
+      image?: string;
     }>;
   };
   /** Technical skills section */

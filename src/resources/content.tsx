@@ -6,9 +6,9 @@ const person: Person = {
   lastName: "Camara",
   name: `Baba Mamadou Camara`,
   role: "Analyste de données",
-  avatar: "/PortfolioBmc/images/avatar.jpg",
+  avatar: "", // aucune photo de profil pour l'instant
   email: "diagodine5@gmail.com",
-  location: "America/Montreal", // IANA tz valide — Québec (heure de l'Est)
+  location: "America/Montreal", // IANA tz valide — Lévis (QC), heure de l'Est
   languages: ["Français", "Anglais"],
   locale: "fr",
 };
@@ -30,10 +30,10 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/PortfolioBmc/images/arriere-plan.png",
+  image: "/PortfolioBmc/images/rapports/Suivi météo - Prévisions et qualité de l'air.png",
   label: "Accueil",
   title: `${person.name} — ${person.role}`,
-  description: `Portfolio de ${person.name}, ${person.role} : Power BI, Databricks, Microsoft Fabric.`,
+  description: `Portfolio de ${person.name}, ${person.role} : Power BI, SQL, modélisation de données et amélioration des processus.`,
   headline: <>Des tableaux de bord que vos équipes utilisent vraiment</>,
   featured: {
     display: true,
@@ -50,7 +50,8 @@ const home: Home = {
   },
   subline: (
     <>
-      Je suis {person.firstName}, {person.role.toLowerCase()}. Je conçois des rapports Power BI de bout en bout, <br /> de la donnée brute jusqu'à la décision.
+      Je suis {person.firstName}, {person.role.toLowerCase()}. Je transforme des données opérationnelles <br /> en
+      tableaux de bord et en processus mesurables.
     </>
   ),
 };
@@ -59,13 +60,13 @@ const about: About = {
   path: "/about",
   label: "À propos",
   title: `À propos – ${person.name}`,
-  description: `${person.name}, ${person.role} basé à Québec (QC).`,
+  description: `${person.name}, ${person.role} basé à Lévis (QC) — ouvert à la relocalisation en Ontario.`,
   tableOfContent: {
     display: true,
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: false, // réactiver une fois une photo personnelle ajoutée
   },
   calendar: {
     display: false,
@@ -76,9 +77,12 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        {person.firstName} est {person.role.toLowerCase()} basé à Québec, analyste en intelligence d'affaires
-        chez Canac. Seul développeur Power BI de son entreprise, il conçoit les tableaux de bord de bout en bout :
-        collecte et validation des données, modélisation, automatisation, gouvernance et visualisation.
+        Analyste de données bilingue avec plus de deux ans d'expérience en intelligence d'affaires, modélisation de
+        données et amélioration de processus au sein d'un centre de services scolaire. Spécialisé en Power BI, SQL et
+        DAX, avec une réalisation phare : un projet Lean Six Sigma (Ceinture verte) ayant réduit de 55 % la file
+        d'attente des réparations et ramené le délai moyen à 20 jours. {person.firstName} transforme des données brutes
+        en tableaux de bord décisionnels et en recommandations concrètes. Basé à Lévis (QC), actuellement en démarche de
+        relocalisation vers l'Ontario.
       </>
     ),
   },
@@ -87,33 +91,32 @@ const about: About = {
     title: "Expériences",
     experiences: [
       {
-        company: "Canac – Siège social, Québec (QC)",
-        timeframe: "Depuis février 2026",
-        role: "Analyste en intelligence d'affaires",
+        company: "Centre de services scolaire des Navigateurs (CSSDN) – Lévis (QC)",
+        timeframe: "Depuis mars 2024",
+        role: "Analyste informatique",
         achievements: [
           <>
-            Seul développeur Power BI de l'entreprise : conçoit l'ensemble des tableaux de bord, du suivi
-            budgétaire aux rapports opérationnels, et gère les espaces de travail et la sécurité dans Power BI Service.
+            Pilote un projet Lean Six Sigma (Ceinture verte) sur le processus de réparation des Chromebooks : analyse des
+            délais et des volumes, réduction de 55 % de la file d'attente, délai moyen ramené à 20 jours et conformité
+            FIFO portée à 96 %.
           </>,
           <>
-            Reconçoit en Power BI les rapports historiques SAP Analytics Cloud et conçoit le thème JSON et les
-            gabarits visuels de l'entreprise. Interroge et valide les données dans Databricks (bronze / argent / or).
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "Ville de Québec – Service des finances",
-        timeframe: "2024 – 2026",
-        role: "Technicien en exploitation et valorisation de données",
-        achievements: [
-          <>
-            Transition des rapports SAP Web Intelligence vers Power BI ; rapports financiers stratégiques déployés
-            dans toutes les unités administratives, cloisonnés par direction avec la sécurité au niveau des lignes (RLS).
+            Conçoit un modèle de données normalisé en étoile à partir des données ITSM (C2Atom) et développe des
+            rapports Power BI multi-pages, avec des mesures DAX avancées pour suivre les délais de traitement, les
+            volumes et la conformité des processus.
           </>,
           <>
-            Conception seul d'un système de gestion des demandes de rapports de bout en bout : Microsoft Forms →
-            Power Automate → Microsoft Planner → tableau de bord Power BI de suivi alimenté chaque jour.
+            A construit un pipeline d'intégration SQL / PowerShell automatisant la synchronisation entre les systèmes
+            sources (Active Directory, système de paie), exécuté trois fois par jour, garantissant l'intégrité des
+            données de reporting.
+          </>,
+          <>
+            Administre la plateforme ITSM C2Atom (formulaires, champs personnalisés, flux de travail) et a conçu le
+            module de gestion des initiatives (suivi Impact / Effort) en collaboration avec la direction.
+          </>,
+          <>
+            Analyse les besoins d'affaires des services et des écoles, et les traduit en recommandations logicielles et
+            en tableaux de bord d'aide à la décision. Forme et accompagne les utilisateurs sur les outils de reporting.
           </>,
         ],
         images: [],
@@ -125,12 +128,8 @@ const about: About = {
     title: "Études",
     institutions: [
       {
-        name: "Université du Québec en Outaouais",
+        name: "Université du Québec en Outaouais (UQO), Gatineau",
         description: <>Baccalauréat en informatique (2023).</>,
-      },
-      {
-        name: "Groupe scolaire Educazur, Dakar",
-        description: <>DEC en sciences mathématiques et expérimentales (2019).</>,
       },
     ],
   },
@@ -139,32 +138,9 @@ const about: About = {
     title: "Certifications",
     items: [
       {
-        name: "Python for Data Science, AI & Development",
-        issuer: "IBM · Coursera",
-        date: "Février 2024",
-        link: "https://coursera.org/verify/SHBQNFUEKYCD",
-        image: "/PortfolioBmc/images/certifications/Python for Data Science, AI & Development.jpg",
-      },
-      {
-        name: "Data Visualization and Dashboards with Excel and Cognos",
-        issuer: "IBM · Coursera",
-        date: "Février 2024",
-        link: "https://coursera.org/verify/GAZDPELXZRF5",
-        image: "/PortfolioBmc/images/certifications/Data Visualization and Dashboards with Excel and Cognos.jpg",
-      },
-      {
-        name: "Excel Basics for Data Analysis",
-        issuer: "IBM · Coursera",
-        date: "Février 2024",
-        link: "https://coursera.org/verify/JQMLS8BLRNK7",
-        image: "/PortfolioBmc/images/certifications/Excel Basics for Data Analysis.jpg",
-      },
-      {
-        name: "Introduction to Data Analytics",
-        issuer: "IBM · Coursera",
-        date: "Janvier 2024",
-        link: "https://coursera.org/verify/NFK75XGG96WJ",
-        image: "/PortfolioBmc/images/certifications/Introduction to Data Analytics.jpg",
+        name: "Lean Six Sigma — Ceinture verte",
+        issuer: "Edgenda",
+        date: "2025",
       },
     ],
   },
@@ -173,25 +149,34 @@ const about: About = {
     title: "Compétences techniques",
     skills: [
       {
-        title: "Power BI",
+        title: "Intelligence d'affaires",
         description: (
-          <>DAX avancé, Power Query (M), fonctions personnalisées (UDF), thèmes JSON, visuels SVG / HTML / JS. Desktop &amp; Service.</>
+          <>
+            Power BI (Desktop et Service), DAX (mesures, AVERAGEX), Power Query, publication et actualisation des
+            rapports.
+          </>
         ),
         tags: [],
         images: [],
       },
       {
-        title: "Données & plateformes",
+        title: "Modélisation & bases de données",
         description: (
-          <>Databricks (architecture médaillon bronze / argent / or), Microsoft Fabric, SAP WEBI / SAC, SQL.</>
+          <>
+            Schéma en étoile, normalisation, conception de modèles multi-tables. SQL Server, requêtes SQL, entreposage
+            de données, sécurité des bases de données.
+          </>
         ),
         tags: [],
         images: [],
       },
       {
-        title: "Automatisation & gouvernance",
+        title: "Amélioration des processus & outils",
         description: (
-          <>Power Automate, Power Apps, Microsoft Forms, Lists. Sécurité RLS / OLS, Python, bonnes pratiques de modélisation.</>
+          <>
+            Lean Six Sigma Ceinture verte, méthodologie DMAIC, indicateurs de performance (KPI). Microsoft Fabric,
+            C2Atom (ITSM), Excel avancé, Python (Pandas — notions).
+          </>
         ),
         tags: [],
         images: [],

@@ -1,6 +1,6 @@
 # Portfolio — Baba Mamadou Camara
 
-Portfolio personnel de **Baba Mamadou Camara**, analyste de données (Power BI, Databricks, Microsoft Fabric).
+Portfolio personnel de **Baba Mamadou Camara**, analyste de données (Power BI, SQL, Microsoft Fabric).
 Application Next.js exportée en statique, hébergée sur GitHub Pages.
 
 **En ligne :** https://diagodine5-byte.github.io/PortfolioBmc/
