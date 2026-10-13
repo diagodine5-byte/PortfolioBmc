@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Camara",
   name: `Baba Mamadou Camara`,
   role: "Analyste de données",
-  avatar: "", // aucune photo de profil pour l'instant
+  avatar: "/PortfolioBmc/images/avatar.jpg",
   email: "diagodine5@gmail.com",
   location: "America/Montreal", // IANA tz valide — Lévis (QC), heure de l'Est
   languages: ["Français", "Anglais"],
@@ -30,23 +30,24 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/PortfolioBmc/images/rapports/Suivi météo - Prévisions et qualité de l'air.png",
+  image: "/PortfolioBmc/images/avatar.jpg",
   label: "Accueil",
   title: `${person.name} — ${person.role}`,
   description: `Portfolio de ${person.name}, ${person.role} : Power BI, SQL, modélisation de données et amélioration des processus.`,
   headline: <>Des tableaux de bord que vos équipes utilisent vraiment</>,
+  // Réactiver une fois un premier rapport publié, en pointant href vers son slug.
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Suivi météo</strong>{" "}
+        <strong className="ml-4">Rapport</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Rapport en vedette
         </Text>
       </Row>
     ),
-    href: "/work/suivi-meteo",
+    href: "/work",
   },
   subline: (
     <>
@@ -66,7 +67,7 @@ const about: About = {
     subItems: false,
   },
   avatar: {
-    display: false, // réactiver une fois une photo personnelle ajoutée
+    display: true,
   },
   calendar: {
     display: false,
@@ -197,15 +198,8 @@ const gallery: Gallery = {
   label: "Galerie",
   title: `Galerie – ${person.name}`,
   description: `Aperçus de rapports par ${person.name}`,
-  images: [
-    { src: "/PortfolioBmc/images/rapports/Suivi météo - Prévisions et qualité de l'air.png", alt: "Dashboard Suivi météo", orientation: "horizontal" },
-    { src: "/PortfolioBmc/images/rapports/Analyse des Ventes, Profits et Performance.png", alt: "Dashboard Ventes & Performance", orientation: "horizontal" },
-    { src: "/PortfolioBmc/images/rapports/Catalogue et performance des véhicules.png", alt: "Catalogue des véhicules", orientation: "horizontal" },
-    { src: "/PortfolioBmc/images/rapports/Suivi des Projets - Pilotage et budget.png", alt: "Suivi des projets", orientation: "horizontal" },
-    { src: "/PortfolioBmc/images/rapports/Uber - Trajets, revenus et flotte.png", alt: "Dashboard Uber", orientation: "horizontal" },
-    { src: "/PortfolioBmc/images/rapports/Suivi de la masse salariale.png", alt: "Salaires & Budget RH", orientation: "horizontal" },
-    { src: "/PortfolioBmc/images/rapports/Commentaires en temps réel - Saisie centralisée.png", alt: "Commentaires en temps réel", orientation: "horizontal" },
-  ],
+  // Ajouter ici les aperçus de tes propres rapports, déposés dans public/images/rapports/.
+  images: [],
 };
 
 export { person, social, home, about, work, gallery };

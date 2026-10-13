@@ -24,8 +24,10 @@ type Metadata = {
 import { notFound } from "next/navigation";
 
 function getMDXFiles(dir: string) {
+  // Aucun rapport publié : on renvoie une liste vide plutôt qu'un 404,
+  // pour que /work et la galerie s'affichent simplement sans contenu.
   if (!fs.existsSync(dir)) {
-    notFound();
+    return [];
   }
 
   return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
