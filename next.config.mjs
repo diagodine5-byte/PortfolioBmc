@@ -2,7 +2,12 @@ import mdx from "@next/mdx";
 
 const withMDX = mdx({
   extension: /\.mdx?$/,
-  options: {},
+  options: {
+    // Sans GFM, un tableau Markdown dans un .mdx s'affiche en texte brut.
+    // Turbopack exige des options sérialisables : le plugin se référence par
+    // son nom, pas par la fonction importée.
+    remarkPlugins: [["remark-gfm", {}]],
+  },
 });
 
 // GitHub Pages: sous-dossier = /<repo>. Défini via env au build (Action), vide en local.

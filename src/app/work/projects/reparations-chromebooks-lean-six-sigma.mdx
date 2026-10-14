@@ -1,0 +1,44 @@
+---
+title: "Réduire de 55 % la file d'attente des réparations"
+publishedAt: "2025-11-01"
+summary: "Projet Lean Six Sigma (Ceinture verte) sur un processus de réparation d'appareils : modélisation des données ITSM, mesure des délais et refonte du flux de traitement."
+images:
+  - "/PortfolioBmc/images/projets/modele-etoile-reparations.svg"
+tag: "Lean Six Sigma · Power BI"
+---
+
+Le parc d'appareils d'un centre de services scolaire génère un flux continu de réparations. Quand la file s'allonge, ce sont des élèves qui attendent leur outil de travail. Le problème n'était pas visible faute de mesure : les demandes transitaient par la plateforme ITSM, mais personne ne suivait les délais de bout en bout.
+
+J'ai mené ce projet selon la méthode **DMAIC**, dans le cadre de ma certification Lean Six Sigma Ceinture verte.
+
+## Mesurer avant de corriger
+
+La première étape a consisté à rendre le processus observable. Les données brutes de la plateforme ITSM ne se prêtaient pas à l'analyse : j'ai conçu un **modèle normalisé en étoile**, avec une table de faits centrée sur les réparations et des dimensions temps, appareil, établissement et statut.
+
+<img src="/PortfolioBmc/images/projets/modele-etoile-reparations.svg" alt="Schéma illustratif : une table de faits Réparations reliée aux dimensions Date, Appareil, Établissement et Statut" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
+
+Ce modèle a permis de construire en Power BI des **mesures DAX** sur les trois indicateurs qui comptaient :
+
+- le **délai de traitement** réel, de la demande à la remise de l'appareil ;
+- le **volume en file d'attente**, suivi dans le temps plutôt qu'à l'instant présent ;
+- la **conformité FIFO**, c'est-à-dire la proportion de demandes traitées dans l'ordre d'arrivée.
+
+Ce dernier indicateur s'est révélé le plus révélateur. Une file qui s'allonge est un symptôme ; des demandes traitées hors séquence en sont souvent la cause.
+
+## Résultats
+
+| Indicateur | Résultat |
+|---|---|
+| File d'attente | **−55 %** |
+| Délai moyen de réparation | ramené à **20 jours** |
+| Conformité FIFO | **96 %** |
+
+## Ce que le projet a demandé
+
+Le volet technique — modélisation en étoile, DAX, rapports multi-pages — n'était qu'une moitié du travail. L'autre moitié a été d'amener les équipes concernées à regarder les mêmes chiffres, puis à accepter de changer une habitude de priorisation. Un tableau de bord ne corrige rien tout seul : il rend visible ce qu'il faut décider.
+
+---
+
+**Technologies :** Power BI (Desktop et Service) · DAX · Power Query · modélisation en étoile · données ITSM
+
+> Ce projet a été réalisé en milieu professionnel. Aucune donnée, capture de rapport ou information interne n'est reproduite ici : le schéma ci-dessus est une illustration générique de l'approche de modélisation.

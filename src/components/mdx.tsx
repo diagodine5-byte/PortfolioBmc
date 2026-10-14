@@ -1,4 +1,5 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import React, { ReactNode } from "react";
 import { slugify as transliterate } from "transliteration";
 
@@ -209,5 +210,14 @@ type CustomMDXProps = MDXRemoteProps & {
 };
 
 export function CustomMDX(props: CustomMDXProps) {
-  return <MDXRemote options={{ blockJS: false }} {...props} components={{ ...components, ...(props.components || {}) }} />;
+  return (
+    <MDXRemote
+      // Les .mdx passent par next-mdx-remote, pas par le chargeur de
+      // next.config.mjs : les plugins remark se déclarent donc ici.
+      // Sans GFM, un tableau Markdown s'affiche en texte brut.
+      options={{ blockJS: false, mdxOptions: { remarkPlugins: [remarkGfm] } }}
+      {...props}
+      components={{ ...components, ...(props.components || {}) }}
+    />
+  );
 }
