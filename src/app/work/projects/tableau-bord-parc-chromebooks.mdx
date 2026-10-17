@@ -1,0 +1,52 @@
+---
+title: "Tableau de bord du parc d'appareils : rendre un processus mesurable"
+publishedAt: "2025-06-20"
+summary: "Modèle de données en étoile sur les données ITSM et rapport Power BI en cinq pages, conçus pour suivre les délais de réparation, les volumes et les pièces défectueuses à l'échelle d'un centre de services scolaire."
+images:
+  - "/PortfolioBmc/images/projets/tableau-bord-reparations.svg"
+tag: "Power BI · Modélisation"
+---
+
+Un parc de plusieurs milliers d'appareils scolaires génère un flux continu de réparations. Les demandes transitaient par la plateforme ITSM, mais les données brutes ne répondaient à aucune question utile : combien de temps une réparation prend-elle réellement, quelles pièces cassent le plus, quels établissements sont les plus touchés.
+
+J'ai conçu le modèle de données et le rapport Power BI qui ont rendu ce processus observable.
+
+<img src="/PortfolioBmc/images/projets/tableau-bord-reparations.svg" alt="Reconstitution anonymisée de la page d'accueil : quatre indicateurs clés, la répartition des billets par marque et par établissement, et des segments par année" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
+
+## Le modèle
+
+Les données ITSM ne se prêtaient pas directement à l'analyse. J'ai construit un **schéma en étoile** autour de deux tables de faits — les billets de réparation et les pièces remplacées — entourées des dimensions **Date**, **Établissement**, **Modèle** et **Catégorie de pièce**.
+
+Cette structure est ce qui permet de croiser librement les angles : quelle pièce casse, sur quel modèle, dans quel établissement, et en combien de temps. Les filtres se propagent des dimensions vers les faits, de sorte qu'un segment appliqué sur une page vaut pour tous les visuels.
+
+Par-dessus, des **mesures DAX** calculent la durée de traitement réelle à partir des dates de création et de fermeture, les volumes en file, et les moyennes par modèle et par établissement.
+
+## Les cinq pages
+
+Chaque page répond à une question précise plutôt que d'empiler des graphiques :
+
+- **Vue d'ensemble** — volumes, délai moyen, délai maximal, répartition par marque et par établissement ;
+- **Pièces brisées** — ce qui casse réellement, par pièce et par catégorie ;
+- **Par modèle** — une matrice pièce × famille de modèle en mise en forme conditionnelle, qui indique quelles pièces tenir en stock pour quels appareils ;
+- **Par établissement** — la même lecture vue par école, pour cibler les besoins localement ;
+- **Délais** — durées par modèle, évolution dans le temps, et palmarès des billets les plus longs.
+
+## Ce que le rapport a révélé
+
+Deux constats ont orienté les décisions qui ont suivi.
+
+**La demande en pièces est très concentrée.** L'affichage et l'alimentation représentent à eux seuls la moitié des pièces remplacées. Un stock centralisé sur une poignée de références couvre donc l'essentiel des besoins — c'est une décision d'approvisionnement, pas une intuition.
+
+**L'écart entre le délai moyen et le délai maximal était considérable.** Un maximum de plusieurs centaines de jours face à une moyenne de deux mois ne décrit pas des réparations lentes : il révèle des billets jamais refermés. Un problème de qualité de données autant que de processus, et une raison de suivre la médiane à côté de la moyenne.
+
+## Ce que j'en retiens
+
+Un tableau de bord ne vaut que par les décisions qu'il permet. La page la plus utile de ce rapport n'est pas la vue d'ensemble, celle qui impressionne : c'est la matrice pièce × modèle, qui se lit comme une liste de commande.
+
+Ce rapport a ensuite servi de base de mesure à un [projet d'amélioration Lean Six Sigma](/work/reparations-chromebooks-lean-six-sigma) sur le même processus.
+
+---
+
+**Technologies :** Power BI (Desktop et Service) · DAX · Power Query · modélisation en schéma étoile · données ITSM
+
+> Projet réalisé en milieu professionnel. L'illustration est une reconstitution anonymisée aux valeurs fictives : aucun nom d'établissement, aucun volume réel et aucune donnée interne n'y figurent.

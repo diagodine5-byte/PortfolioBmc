@@ -21,21 +21,9 @@ J'ai cadré le projet avec une **charte** posant le mandat, les inclusions et ex
 
 Impossible d'analyser un processus que personne ne mesure. Les demandes transitaient par la plateforme ITSM, mais les données brutes ne se prêtaient pas à l'analyse : aucun suivi des délais de bout en bout, aucune vision de ce qui cassait réellement.
 
-J'ai donc commencé par **concevoir le modèle de données et le tableau de bord Power BI** qui allaient servir de base à tout le projet.
+J'ai donc commencé par concevoir un modèle de données en étoile sur les données ITSM et le [tableau de bord Power BI](/work/tableau-bord-parc-chromebooks) qui allait servir de base de mesure à tout le projet.
 
-Le modèle repose sur un **schéma en étoile** : deux tables de faits — les billets de réparation et les pièces remplacées — entourées des dimensions Date, Établissement, Modèle et Catégorie de pièce. Les filtres se propagent des dimensions vers les faits, ce qui permet de croiser n'importe quel angle : quelle pièce casse, sur quel modèle, dans quelle école, et en combien de temps.
-
-Par-dessus, des **mesures DAX** calculent la durée de traitement réelle à partir des dates de création et de fermeture, les volumes en file, les moyennes par modèle et par établissement.
-
-Le rapport compte cinq pages, chacune répondant à une question précise :
-
-- **Vue d'ensemble** — volumes, délai moyen, délai maximal, répartition par marque et par école ;
-- **Pièces brisées** — ce qui casse réellement, par pièce et par catégorie ;
-- **Par modèle** — une matrice pièce × famille de modèle en mise en forme conditionnelle, qui indique directement quelles pièces stocker pour quels appareils ;
-- **Par établissement** — la même lecture vue par école, pour cibler les besoins localement ;
-- **Délais** — durées par modèle, évolution dans le temps, et palmarès des billets les plus longs.
-
-Deux constats ont orienté toute la suite. D'abord, **l'affichage et l'alimentation représentent à eux seuls la moitié des pièces remplacées** — l'essentiel de la demande tient à une poignée de références. Ensuite, l'écart entre le délai moyen et le délai maximal était tel qu'il révélait des billets oubliés plutôt que des réparations lentes.
+Deux constats en sont ressortis, et ils ont orienté toute la suite. D'abord, **l'affichage et l'alimentation représentent à eux seuls la moitié des pièces remplacées** — l'essentiel de la demande tient à une poignée de références. Ensuite, l'écart entre le délai moyen et le délai maximal était tel qu'il révélait des billets oubliés plutôt que des réparations lentes.
 
 ## Mesurer le gaspillage
 

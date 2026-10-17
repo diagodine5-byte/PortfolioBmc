@@ -205,6 +205,11 @@ const gallery: Gallery = {
       alt: "Le flux de réparation passe de sept à cinq étapes après suppression de deux attentes, portant l'efficience du processus de 0,45 % à 8 %",
       orientation: "horizontal",
     },
+    {
+      src: "/PortfolioBmc/images/projets/tableau-bord-reparations.svg",
+      alt: "Reconstitution anonymisée du tableau de bord : indicateurs clés, billets par marque et par établissement",
+      orientation: "horizontal",
+    },
   ],
 };
 

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-label="Reconstitution anonymisée de la page Vue d'ensemble du tableau de bord : quatre indicateurs clés, la répartition des billets par marque et par établissement, et des segments par année">
+  <defs>
+    <style>
+      .bg    { fill: #0E1B2A; }
+      .ttl   { fill: #E8F0FA; font: 700 28px Helvetica, Arial, sans-serif; }
+      .sub   { fill: #7E93AB; font: 400 15px Helvetica, Arial, sans-serif; }
+      .card  { fill: #16293D; stroke: #2B4761; stroke-width: 2; }
+      .panel { fill: #132434; stroke: #2B4761; stroke-width: 2; }
+      .klab  { fill: #7E93AB; font: 400 14px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .kval  { fill: #E8F0FA; font: 700 36px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .kacc  { fill: #5BA8F5; font: 700 36px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .kgrn  { fill: #8FD0A8; font: 700 36px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .kwrn  { fill: #E8A34D; font: 700 36px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .ptit  { fill: #BBCBDD; font: 600 15px Helvetica, Arial, sans-serif; }
+      .blab  { fill: #9DB2C8; font: 400 12px Helvetica, Arial, sans-serif; text-anchor: end; }
+      .xlab  { fill: #7E93AB; font: 400 10px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .axis  { stroke: #2B4761; stroke-width: 1.5; }
+      .chipR { fill: #1C3650; stroke: #2B4761; stroke-width: 1.5; }
+      .chipT { fill: #BBCBDD; font: 600 13px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .slab  { fill: #7E93AB; font: 600 11px Helvetica, Arial, sans-serif; letter-spacing: 1.1px; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="700" rx="16" />
+
+  <text class="ttl" x="60" y="48">Vue d'ensemble — suivi des réparations</text>
+  <text class="sub" x="60" y="74">Reconstitution anonymisée de la page d'accueil du rapport · valeurs illustratives</text>
+
+  <!-- indicateurs -->
+  <rect class="card" x="60"  y="98" width="255" height="104" rx="12" />
+  <text class="klab" x="187" y="132">Billets de réparation</text>
+  <text class="kval" x="187" y="176">5 600</text>
+
+  <rect class="card" x="335" y="98" width="255" height="104" rx="12" />
+  <text class="klab" x="462" y="132">Délai moyen (jours)</text>
+  <text class="kacc" x="462" y="176">60</text>
+
+  <rect class="card" x="610" y="98" width="255" height="104" rx="12" />
+  <text class="klab" x="737" y="132">Établissements</text>
+  <text class="kgrn" x="737" y="176">66</text>
+
+  <rect class="card" x="885" y="98" width="255" height="104" rx="12" />
+  <text class="klab" x="1012" y="132">Délai maximal (jours)</text>
+  <text class="kwrn" x="1012" y="176">880</text>
+
+  <!-- panneau marques -->
+  <rect class="panel" x="60" y="228" width="520" height="340" rx="12" />
+  <text class="ptit" x="82" y="258">Billets par marque</text>
+
+  <text class="blab" x="150" y="306">Marque A</text>
+  <rect x="160" y="290" width="390" height="24" rx="4" fill="#5BA8F5" />
+
+  <text class="blab" x="150" y="350">Autre</text>
+  <rect x="160" y="334" width="130" height="24" rx="4" fill="#7FC4FF" />
+
+  <text class="blab" x="150" y="394">Marque B</text>
+  <rect x="160" y="378" width="120" height="24" rx="4" fill="#8FD0A8" />
+
+  <text class="blab" x="150" y="438">Marque C</text>
+  <rect x="160" y="422" width="32" height="24" rx="4" fill="#E8A34D" />
+
+  <text class="blab" x="150" y="482">Marque D</text>
+  <rect x="160" y="466" width="30" height="24" rx="4" fill="#C96A80" />
+
+  <text class="blab" x="150" y="526">Marque E</text>
+  <rect x="160" y="510" width="18" height="24" rx="4" fill="#B07FD0" />
+
+  <line class="axis" x1="160" y1="544" x2="550" y2="544" />
+  <text class="xlab" x="160" y="560">0</text>
+  <text class="xlab" x="355" y="560">2 000</text>
+  <text class="xlab" x="550" y="560">4 000</text>
+
+  <!-- panneau etablissements -->
+  <rect class="panel" x="620" y="228" width="520" height="340" rx="12" />
+  <text class="ptit" x="642" y="258">Billets par établissement</text>
+
+  <rect x="662"  y="330" width="28" height="190" rx="3" fill="#9B8BE0" />
+  <rect x="700"  y="400" width="28" height="120" rx="3" fill="#9B8BE0" />
+  <rect x="738"  y="402" width="28" height="118" rx="3" fill="#9B8BE0" />
+  <rect x="776"  y="413" width="28" height="107" rx="3" fill="#9B8BE0" />
+  <rect x="814"  y="419" width="28" height="101" rx="3" fill="#9B8BE0" />
+  <rect x="852"  y="477" width="28" height="43"  rx="3" fill="#9B8BE0" />
+  <rect x="890"  y="480" width="28" height="40"  rx="3" fill="#9B8BE0" />
+  <rect x="928"  y="482" width="28" height="38"  rx="3" fill="#9B8BE0" />
+  <rect x="966"  y="496" width="28" height="24"  rx="3" fill="#9B8BE0" />
+  <rect x="1004" y="498" width="28" height="22"  rx="3" fill="#9B8BE0" />
+  <rect x="1042" y="500" width="28" height="20"  rx="3" fill="#9B8BE0" />
+  <rect x="1080" y="502" width="28" height="18"  rx="3" fill="#9B8BE0" />
+
+  <line class="axis" x1="650" y1="520" x2="1120" y2="520" />
+  <text class="xlab" x="676"  y="538">1</text>
+  <text class="xlab" x="714"  y="538">2</text>
+  <text class="xlab" x="752"  y="538">3</text>
+  <text class="xlab" x="790"  y="538">4</text>
+  <text class="xlab" x="828"  y="538">5</text>
+  <text class="xlab" x="866"  y="538">6</text>
+  <text class="xlab" x="904"  y="538">7</text>
+  <text class="xlab" x="942"  y="538">8</text>
+  <text class="xlab" x="980"  y="538">9</text>
+  <text class="xlab" x="1018" y="538">10</text>
+  <text class="xlab" x="1056" y="538">11</text>
+  <text class="xlab" x="1094" y="538">12</text>
+  <text class="sub"  x="642"  y="558">Établissements anonymisés, classés par volume</text>
+
+  <!-- segments -->
+  <text class="slab" x="60" y="604">SEGMENT · ANNÉE</text>
+  <rect class="chipR" x="60"  y="616" width="92" height="40" rx="8" />
+  <text class="chipT" x="106" y="641">2022</text>
+  <rect class="chipR" x="162" y="616" width="92" height="40" rx="8" />
+  <text class="chipT" x="208" y="641">2023</text>
+  <rect class="chipR" x="264" y="616" width="92" height="40" rx="8" />
+  <text class="chipT" x="310" y="641">2024</text>
+  <rect class="chipR" x="366" y="616" width="92" height="40" rx="8" />
+  <text class="chipT" x="412" y="641">2025</text>
+  <rect class="chipR" x="468" y="616" width="92" height="40" rx="8" />
+  <text class="chipT" x="514" y="641">2026</text>
+
+  <text class="slab" x="620" y="604">SEGMENT · MARQUE</text>
+  <rect class="chipR" x="620" y="616" width="100" height="40" rx="8" />
+  <text class="chipT" x="670" y="641">Marque A</text>
+  <rect class="chipR" x="730" y="616" width="100" height="40" rx="8" />
+  <text class="chipT" x="780" y="641">Marque B</text>
+  <rect class="chipR" x="840" y="616" width="100" height="40" rx="8" />
+  <text class="chipT" x="890" y="641">Marque C</text>
+  <rect class="chipR" x="950" y="616" width="100" height="40" rx="8" />
+  <text class="chipT" x="1000" y="641">Marque D</text>
+  <rect class="chipR" x="1060" y="616" width="80" height="40" rx="8" />
+  <text class="chipT" x="1100" y="641">Autre</text>
+</svg>
