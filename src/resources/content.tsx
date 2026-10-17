@@ -198,20 +198,11 @@ const gallery: Gallery = {
   label: "Galerie",
   title: `Galerie – ${person.name}`,
   description: `Aperçus de rapports par ${person.name}`,
+  // Une image par projet.
   images: [
     {
-      src: "/PortfolioBmc/images/projets/ecp-avant-apres.svg",
-      alt: "Efficience du processus portée de 0,45 % à 8 % au fil des six phases DMAIIC",
-      orientation: "horizontal",
-    },
-    {
-      src: "/PortfolioBmc/images/projets/modele-donnees-reparations.svg",
-      alt: "Modèle en étoile : les faits Billets et Pièces entourés des dimensions Date, Établissement, Modèle et Catégorie",
-      orientation: "horizontal",
-    },
-    {
-      src: "/PortfolioBmc/images/projets/cinq-pourquoi.svg",
-      alt: "Deux chaînes de cinq pourquoi remontant aux causes fondamentales des retards de réparation",
+      src: "/PortfolioBmc/images/projets/lean-reparations-chromebooks.svg",
+      alt: "Le flux de réparation passe de sept à cinq étapes après suppression de deux attentes, portant l'efficience du processus de 0,45 % à 8 %",
       orientation: "horizontal",
     },
   ],

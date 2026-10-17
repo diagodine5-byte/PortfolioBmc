@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="1200" height="860" role="img" aria-label="Le flux de réparation passe de sept à cinq étapes après suppression de deux attentes, portant l'efficience du processus de 0,45 % à 8 %">
+  <defs>
+    <style>
+      .bg    { fill: #0E1B2A; }
+      .ttl   { fill: #E8F0FA; font: 700 30px Helvetica, Arial, sans-serif; }
+      .sub   { fill: #7E93AB; font: 400 17px Helvetica, Arial, sans-serif; }
+      .tagB  { fill: #7E93AB; font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 1.4px; }
+      .tagA  { fill: #8FD0A8; font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 1.4px; }
+      .box   { fill: #16293D; stroke: #2B4761; stroke-width: 2; }
+      .waste { fill: #3A1F2B; stroke: #C96A80; stroke-width: 2; }
+      .keep  { fill: #152F3A; stroke: #8FD0A8; stroke-width: 2; }
+      .t     { fill: #BBCBDD; font: 400 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .tw    { fill: #F2C9D3; font: 600 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .tk    { fill: #CDEBD9; font: 400 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .arr   { stroke: #2B4761; stroke-width: 2; }
+      .gain  { stroke: #8FD0A8; stroke-width: 2; stroke-dasharray: 6 5; }
+      .gainT { fill: #8FD0A8; font: 600 15px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .sep   { stroke: #2B4761; stroke-width: 2; }
+      .th    { fill: #7E93AB; font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 1.2px; }
+      .rl    { fill: #BBCBDD; font: 400 15px Helvetica, Arial, sans-serif; }
+      .rb    { fill: #9DB2C8; font: 400 15px Helvetica, Arial, sans-serif; }
+      .ra    { fill: #E8F0FA; font: 700 15px Helvetica, Arial, sans-serif; }
+      .rh    { fill: #8FD0A8; font: 700 15px Helvetica, Arial, sans-serif; }
+      .rowl  { stroke: #1E344B; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="860" rx="16" />
+
+  <text class="ttl" x="60" y="58">Éliminer l'attente plutôt qu'accélérer le travail</text>
+  <text class="sub" x="60" y="90">Projet Ceinture verte Lean Six Sigma · réparation de Chromebooks · méthodologie DMAIIC</text>
+
+  <!-- AVANT -->
+  <text class="tagB" x="60" y="146">AVANT · 7 ÉTAPES</text>
+
+  <line class="arr" x1="190" y1="202" x2="218" y2="202" />
+  <line class="arr" x1="348" y1="202" x2="376" y2="202" />
+  <line class="arr" x1="506" y1="202" x2="534" y2="202" />
+  <line class="arr" x1="664" y1="202" x2="692" y2="202" />
+  <line class="arr" x1="822" y1="202" x2="850" y2="202" />
+  <line class="arr" x1="980" y1="202" x2="1008" y2="202" />
+
+  <rect class="box" x="60" y="164" width="130" height="76" rx="10" />
+  <text class="t" x="125" y="198">Demande</text><text class="t" x="125" y="214">créée</text>
+
+  <rect class="box" x="218" y="164" width="130" height="76" rx="10" />
+  <text class="t" x="283" y="198">Diagnostic</text><text class="t" x="283" y="214">à l'école</text>
+
+  <rect class="box" x="376" y="164" width="130" height="76" rx="10" />
+  <text class="t" x="441" y="198">Envoi à</text><text class="t" x="441" y="214">l'entrepôt</text>
+
+  <rect class="waste" x="534" y="164" width="130" height="76" rx="10" />
+  <text class="tw" x="599" y="191">Attente</text><text class="tw" x="599" y="207">d'approbation</text><text class="tw" x="599" y="226">✕</text>
+
+  <rect class="waste" x="692" y="164" width="130" height="76" rx="10" />
+  <text class="tw" x="757" y="191">Attente</text><text class="tw" x="757" y="207">de pièce</text><text class="tw" x="757" y="226">✕</text>
+
+  <rect class="box" x="850" y="164" width="130" height="76" rx="10" />
+  <text class="t" x="915" y="206">Réparation</text>
+
+  <rect class="box" x="1008" y="164" width="130" height="76" rx="10" />
+  <text class="t" x="1073" y="198">Retour et</text><text class="t" x="1073" y="214">remise</text>
+
+  <!-- APRES -->
+  <text class="tagA" x="60" y="316">APRÈS · 5 ÉTAPES</text>
+
+  <line class="arr" x1="190" y1="372" x2="218" y2="372" />
+  <line class="arr" x1="348" y1="372" x2="376" y2="372" />
+  <line class="arr" x1="506" y1="372" x2="534" y2="372" />
+  <line class="arr" x1="664" y1="372" x2="692" y2="372" />
+
+  <rect class="keep" x="60" y="334" width="130" height="76" rx="10" />
+  <text class="tk" x="125" y="368">Demande</text><text class="tk" x="125" y="384">créée</text>
+
+  <rect class="keep" x="218" y="334" width="130" height="76" rx="10" />
+  <text class="tk" x="283" y="368">Diagnostic</text><text class="tk" x="283" y="384">à l'école</text>
+
+  <rect class="keep" x="376" y="334" width="130" height="76" rx="10" />
+  <text class="tk" x="441" y="368">Envoi à</text><text class="tk" x="441" y="384">l'entrepôt</text>
+
+  <rect class="keep" x="534" y="334" width="130" height="76" rx="10" />
+  <text class="tk" x="599" y="360">Réparation</text><text class="tk" x="599" y="378">pièce tenue</text><text class="tk" x="599" y="394">en stock</text>
+
+  <rect class="keep" x="692" y="334" width="130" height="76" rx="10" />
+  <text class="tk" x="757" y="368">Retour et</text><text class="tk" x="757" y="384">remise</text>
+
+  <!-- gain -->
+  <line class="gain" x1="850" y1="334" x2="850" y2="410" />
+  <line class="gain" x1="1138" y1="334" x2="1138" y2="410" />
+  <line class="gain" x1="850" y1="372" x2="1138" y2="372" />
+  <text class="gainT" x="994" y="364">temps éliminé</text>
+  <text class="gainT" x="994" y="398">≈ 94 % du délai</text>
+
+  <line class="sep" x1="60" y1="462" x2="1140" y2="462" />
+
+  <!-- tableau -->
+  <text class="th" x="60"  y="512">INDICATEUR</text>
+  <text class="th" x="600" y="512">AVANT</text>
+  <text class="th" x="880" y="512">APRÈS</text>
+
+  <line class="rowl" x1="60" y1="530" x2="1140" y2="530" />
+
+  <text class="rl" x="60"  y="572">Efficience du processus (ECP)</text>
+  <text class="rb" x="600" y="572">0,45 %</text>
+  <text class="rh" x="880" y="572">8 %</text>
+  <line class="rowl" x1="60" y1="594" x2="1140" y2="594" />
+
+  <text class="rl" x="60"  y="636">Durée totale du processus</text>
+  <text class="rb" x="600" y="636">30 380 min</text>
+  <text class="ra" x="880" y="636">1 760 min</text>
+  <line class="rowl" x1="60" y1="658" x2="1140" y2="658" />
+
+  <text class="rl" x="60"  y="700">Temps à valeur ajoutée</text>
+  <text class="rb" x="600" y="700">140 min</text>
+  <text class="ra" x="880" y="700">140 min</text>
+  <line class="rowl" x1="60" y1="722" x2="1140" y2="722" />
+
+  <text class="rl" x="60"  y="764">Attentes et déplacements</text>
+  <text class="rb" x="600" y="764">Importants</text>
+  <text class="ra" x="880" y="764">Fortement réduits</text>
+
+  <text class="sub" x="60" y="822">Le temps de réparation effectif est inchangé : tout le gain vient de l'attente supprimée.</text>
+</svg>

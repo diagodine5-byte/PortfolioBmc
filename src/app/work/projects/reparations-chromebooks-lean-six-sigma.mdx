@@ -3,9 +3,7 @@ title: "Réparation de Chromebooks : l'efficience du processus portée de 0,45 %
 publishedAt: "2025-07-03"
 summary: "Projet de certification Ceinture verte Lean Six Sigma mené selon la méthodologie DMAIIC, appuyé sur un modèle de données et un tableau de bord Power BI conçus pour rendre le processus mesurable."
 images:
-  - "/PortfolioBmc/images/projets/ecp-avant-apres.svg"
-  - "/PortfolioBmc/images/projets/modele-donnees-reparations.svg"
-  - "/PortfolioBmc/images/projets/cinq-pourquoi.svg"
+  - "/PortfolioBmc/images/projets/lean-reparations-chromebooks.svg"
 tag: "Lean Six Sigma · Power BI"
 ---
 
@@ -13,7 +11,7 @@ Dans un centre de services scolaire, un Chromebook immobilisé, c'est un élève
 
 J'ai mené ce projet comme **projet de certification Ceinture verte Lean Six Sigma**, selon la méthodologie **DMAIIC** : Définir, Mesurer, Analyser, Innover, Implanter, Contrôler.
 
-<img src="/PortfolioBmc/images/projets/ecp-avant-apres.svg" alt="Efficience du processus portée de 0,45 % à 8 % au fil des six phases DMAIIC" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
+<img src="/PortfolioBmc/images/projets/lean-reparations-chromebooks.svg" alt="Le flux de réparation passe de sept à cinq étapes après suppression de deux attentes, portant l'efficience du processus de 0,45 % à 8 %" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
 
 ## Définir
 
@@ -24,8 +22,6 @@ J'ai cadré le projet avec une **charte** posant le mandat, les inclusions et ex
 Impossible d'analyser un processus que personne ne mesure. Les demandes transitaient par la plateforme ITSM, mais les données brutes ne se prêtaient pas à l'analyse : aucun suivi des délais de bout en bout, aucune vision de ce qui cassait réellement.
 
 J'ai donc commencé par **concevoir le modèle de données et le tableau de bord Power BI** qui allaient servir de base à tout le projet.
-
-<img src="/PortfolioBmc/images/projets/modele-donnees-reparations.svg" alt="Schéma en étoile : les tables de faits Billets et Pièces remplacées, entourées des dimensions Date, Établissement, Modèle et Catégorie de pièce" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
 
 Le modèle repose sur un **schéma en étoile** : deux tables de faits — les billets de réparation et les pièces remplacées — entourées des dimensions Date, Établissement, Modèle et Catégorie de pièce. Les filtres se propagent des dimensions vers les faits, ce qui permet de croiser n'importe quel angle : quelle pièce casse, sur quel modèle, dans quelle école, et en combien de temps.
 
@@ -62,9 +58,7 @@ Les gaspillages identifiés :
 
 J'ai croisé plusieurs outils pour remonter aux causes réelles plutôt qu'aux symptômes : un **diagramme d'Ishikawa**, un **diagramme des affinités** pour regrouper les causes, un **multi-vote** pour les prioriser, et la technique des **cinq pourquoi** appliquée aux trois problèmes majeurs.
 
-Cette dernière a été la plus instructive. Derrière « les réparations sont retardées », on ne trouvait pas un manque d'effort mais une absence de structure.
-
-<img src="/PortfolioBmc/images/projets/cinq-pourquoi.svg" alt="Deux chaînes de cinq pourquoi : les retards remontent à l'absence de gestion proactive des stocks, et le non-respect des priorités à l'absence de cadre de priorisation" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
+Cette dernière a été la plus instructive. Derrière « les réparations sont retardées », on ne trouvait pas un manque d'effort mais une absence de structure : pas de stock centralisé, des pièces commandées au cas par cas, aucune planification des besoins. Et derrière « les réparations ne sont pas traitées selon leur urgence » : aucun critère de priorité, donc aucune classification des pannes.
 
 Les deux chaînes convergent vers le même diagnostic : rien ne clochait dans le travail des techniciens, tout manquait dans l'organisation autour d'eux.
 
@@ -72,14 +66,18 @@ Une **analyse des contraintes** a désigné le goulot : **l'attente des pièces 
 
 ## Innover, implanter, contrôler
 
-J'ai cartographié la **situation cible**, développé puis priorisé les solutions, et préparé le déploiement avec un plan d'action et un plan de transition, assorti d'un suivi de la mise en place.
+J'ai cartographié la **situation cible** en reprenant le flux étape par étape, puis supprimé celles qui n'apportaient aucune valeur.
+
+Deux attentes concentraient l'essentiel du délai. Un **stock centralisé** sur les références les plus demandées supprime l'attente de pièce ; un **cadre de priorisation** supprime l'étape d'approbation au cas par cas. Les deux découlent directement des causes fondamentales identifiées plus haut.
+
+Le déploiement a été préparé avec un plan d'action et un plan de transition, assortis d'un suivi de la mise en place.
 
 ## Résultat
 
 | Indicateur | Avant | Après |
 |---|---|---|
 | Efficience du processus (ECP) | 0,45 % | **8 %** |
-| Durée totale du processus | 30 455 min | **1 760 min** |
+| Durée totale du processus | 30 380 min | **1 760 min** |
 | Temps à valeur ajoutée | 140 min | 140 min |
 
 Le temps de réparation effectif n'a pas changé — et c'est tout l'intérêt de la démarche. Ce qui a été éliminé, c'est l'attente : la durée sans valeur ajoutée est tombée à un peu plus d'une journée, contre près de trois semaines auparavant. L'efficience du processus a été multipliée par dix-sept.
