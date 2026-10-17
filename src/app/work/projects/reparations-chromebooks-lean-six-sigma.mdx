@@ -1,44 +1,99 @@
 ---
-title: "Réduire de 55 % la file d'attente des réparations"
-publishedAt: "2025-11-01"
-summary: "Projet Lean Six Sigma (Ceinture verte) sur un processus de réparation d'appareils : modélisation des données ITSM, mesure des délais et refonte du flux de traitement."
+title: "Réparation de Chromebooks : l'efficience du processus portée de 0,45 % à 8 %"
+publishedAt: "2025-07-03"
+summary: "Projet de certification Ceinture verte Lean Six Sigma mené selon la méthodologie DMAIIC, appuyé sur un modèle de données et un tableau de bord Power BI conçus pour rendre le processus mesurable."
 images:
-  - "/PortfolioBmc/images/projets/modele-etoile-reparations.svg"
+  - "/PortfolioBmc/images/projets/ecp-avant-apres.svg"
+  - "/PortfolioBmc/images/projets/modele-donnees-reparations.svg"
+  - "/PortfolioBmc/images/projets/cinq-pourquoi.svg"
 tag: "Lean Six Sigma · Power BI"
 ---
 
-Le parc d'appareils d'un centre de services scolaire génère un flux continu de réparations. Quand la file s'allonge, ce sont des élèves qui attendent leur outil de travail. Le problème n'était pas visible faute de mesure : les demandes transitaient par la plateforme ITSM, mais personne ne suivait les délais de bout en bout.
+Dans un centre de services scolaire, un Chromebook immobilisé, c'est un élève privé de son outil de travail. Les réparations s'accumulaient sans que personne ne sache précisément où le temps se perdait.
 
-J'ai mené ce projet selon la méthode **DMAIC**, dans le cadre de ma certification Lean Six Sigma Ceinture verte.
+J'ai mené ce projet comme **projet de certification Ceinture verte Lean Six Sigma**, selon la méthodologie **DMAIIC** : Définir, Mesurer, Analyser, Innover, Implanter, Contrôler.
 
-## Mesurer avant de corriger
+<img src="/PortfolioBmc/images/projets/ecp-avant-apres.svg" alt="Efficience du processus portée de 0,45 % à 8 % au fil des six phases DMAIIC" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
 
-La première étape a consisté à rendre le processus observable. Les données brutes de la plateforme ITSM ne se prêtaient pas à l'analyse : j'ai conçu un **modèle normalisé en étoile**, avec une table de faits centrée sur les réparations et des dimensions temps, appareil, établissement et statut.
+## Définir
 
-<img src="/PortfolioBmc/images/projets/modele-etoile-reparations.svg" alt="Schéma illustratif : une table de faits Réparations reliée aux dimensions Date, Appareil, Établissement et Statut" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
+J'ai cadré le projet avec une **charte** posant le mandat, les inclusions et exclusions, les objectifs SMART et les indicateurs de performance. La **voix du client (VOC)** a servi à formuler le problème du point de vue des écoles, et une **matrice RACI** a clarifié qui décidait, qui exécutait et qui devait être informé.
 
-Ce modèle a permis de construire en Power BI des **mesures DAX** sur les trois indicateurs qui comptaient :
+## Mesurer : construire l'instrument avant de juger
 
-- le **délai de traitement** réel, de la demande à la remise de l'appareil ;
-- le **volume en file d'attente**, suivi dans le temps plutôt qu'à l'instant présent ;
-- la **conformité FIFO**, c'est-à-dire la proportion de demandes traitées dans l'ordre d'arrivée.
+Impossible d'analyser un processus que personne ne mesure. Les demandes transitaient par la plateforme ITSM, mais les données brutes ne se prêtaient pas à l'analyse : aucun suivi des délais de bout en bout, aucune vision de ce qui cassait réellement.
 
-Ce dernier indicateur s'est révélé le plus révélateur. Une file qui s'allonge est un symptôme ; des demandes traitées hors séquence en sont souvent la cause.
+J'ai donc commencé par **concevoir le modèle de données et le tableau de bord Power BI** qui allaient servir de base à tout le projet.
 
-## Résultats
+<img src="/PortfolioBmc/images/projets/modele-donnees-reparations.svg" alt="Schéma en étoile : les tables de faits Billets et Pièces remplacées, entourées des dimensions Date, Établissement, Modèle et Catégorie de pièce" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
 
-| Indicateur | Résultat |
-|---|---|
-| File d'attente | **−55 %** |
-| Délai moyen de réparation | ramené à **20 jours** |
-| Conformité FIFO | **96 %** |
+Le modèle repose sur un **schéma en étoile** : deux tables de faits — les billets de réparation et les pièces remplacées — entourées des dimensions Date, Établissement, Modèle et Catégorie de pièce. Les filtres se propagent des dimensions vers les faits, ce qui permet de croiser n'importe quel angle : quelle pièce casse, sur quel modèle, dans quelle école, et en combien de temps.
 
-## Ce que le projet a demandé
+Par-dessus, des **mesures DAX** calculent la durée de traitement réelle à partir des dates de création et de fermeture, les volumes en file, les moyennes par modèle et par établissement.
 
-Le volet technique — modélisation en étoile, DAX, rapports multi-pages — n'était qu'une moitié du travail. L'autre moitié a été d'amener les équipes concernées à regarder les mêmes chiffres, puis à accepter de changer une habitude de priorisation. Un tableau de bord ne corrige rien tout seul : il rend visible ce qu'il faut décider.
+Le rapport compte cinq pages, chacune répondant à une question précise :
+
+- **Vue d'ensemble** — volumes, délai moyen, délai maximal, répartition par marque et par école ;
+- **Pièces brisées** — ce qui casse réellement, par pièce et par catégorie ;
+- **Par modèle** — une matrice pièce × famille de modèle en mise en forme conditionnelle, qui indique directement quelles pièces stocker pour quels appareils ;
+- **Par établissement** — la même lecture vue par école, pour cibler les besoins localement ;
+- **Délais** — durées par modèle, évolution dans le temps, et palmarès des billets les plus longs.
+
+Deux constats ont orienté toute la suite. D'abord, **l'affichage et l'alimentation représentent à eux seuls la moitié des pièces remplacées** — l'essentiel de la demande tient à une poignée de références. Ensuite, l'écart entre le délai moyen et le délai maximal était tel qu'il révélait des billets oubliés plutôt que des réparations lentes.
+
+## Mesurer le gaspillage
+
+Avec cette visibilité, j'ai cartographié le processus en distinguant les activités à **valeur ajoutée (VA)** de celles sans valeur ajoutée (**NVA**), puis calculé l'**efficience du processus** :
+
+> ECP = VA / DEP, où DEP = VA + NVA
+
+Le résultat a été brutal : **0,45 %**. Sur l'ensemble du temps qu'un appareil passait dans le processus, moins d'un demi pour cent correspondait à une réparation effective. Tout le reste était de l'attente.
+
+Les gaspillages identifiés :
+
+- **l'attente des pièces**, qui dépassait à elle seule 20 jours ;
+- l'attente pour validation ou facturation ;
+- l'**absence de FIFO** — les demandes n'étaient pas traitées dans l'ordre ;
+- l'absence de stockage organisé des pièces ;
+- les déplacements non optimisés des techniciens pour accéder aux pièces et aux outils ;
+- les **reprises**, causées par des réparations incomplètes ou incorrectes.
+
+## Analyser
+
+J'ai croisé plusieurs outils pour remonter aux causes réelles plutôt qu'aux symptômes : un **diagramme d'Ishikawa**, un **diagramme des affinités** pour regrouper les causes, un **multi-vote** pour les prioriser, et la technique des **cinq pourquoi** appliquée aux trois problèmes majeurs.
+
+Cette dernière a été la plus instructive. Derrière « les réparations sont retardées », on ne trouvait pas un manque d'effort mais une absence de structure.
+
+<img src="/PortfolioBmc/images/projets/cinq-pourquoi.svg" alt="Deux chaînes de cinq pourquoi : les retards remontent à l'absence de gestion proactive des stocks, et le non-respect des priorités à l'absence de cadre de priorisation" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
+
+Les deux chaînes convergent vers le même diagnostic : rien ne clochait dans le travail des techniciens, tout manquait dans l'organisation autour d'eux.
+
+Une **analyse des contraintes** a désigné le goulot : **l'attente des pièces dépassait la capacité du processus**. C'était là qu'il fallait agir en premier. Une **analyse des modes de défaillance** a confirmé la criticité — gravité élevée par l'impact direct sur l'école, occurrence fréquente, et détection tardive.
+
+## Innover, implanter, contrôler
+
+J'ai cartographié la **situation cible**, développé puis priorisé les solutions, et préparé le déploiement avec un plan d'action et un plan de transition, assorti d'un suivi de la mise en place.
+
+## Résultat
+
+| Indicateur | Avant | Après |
+|---|---|---|
+| Efficience du processus (ECP) | 0,45 % | **8 %** |
+| Durée totale du processus | 30 455 min | **1 760 min** |
+| Temps à valeur ajoutée | 140 min | 140 min |
+
+Le temps de réparation effectif n'a pas changé — et c'est tout l'intérêt de la démarche. Ce qui a été éliminé, c'est l'attente : la durée sans valeur ajoutée est tombée à un peu plus d'une journée, contre près de trois semaines auparavant. L'efficience du processus a été multipliée par dix-sept.
+
+## Ce que j'en retiens
+
+Mesurer avant de corriger. Le tableau de bord n'a rien réparé par lui-même, mais sans lui l'analyse Lean n'aurait eu aucune prise : c'est lui qui a transformé une impression partagée en chiffres opposables. L'ECP de 0,45 % a ensuite déplacé la discussion — le sujet n'était plus la vitesse des techniciens, mais la structure du flux autour d'eux.
+
+C'est aussi ce que j'ai appris sur les deux métiers : l'intelligence d'affaires montre **où** le problème se trouve, la démarche Lean dit **quoi en faire**. Séparées, chacune tourne court.
 
 ---
 
-**Technologies :** Power BI (Desktop et Service) · DAX · Power Query · modélisation en étoile · données ITSM
+**Intelligence d'affaires :** Power BI (Desktop et Service) · DAX · Power Query · modélisation en schéma étoile · données ITSM
 
-> Ce projet a été réalisé en milieu professionnel. Aucune donnée, capture de rapport ou information interne n'est reproduite ici : le schéma ci-dessus est une illustration générique de l'approche de modélisation.
+**Lean Six Sigma :** DMAIIC · cartographie VA / NVA · efficience du processus (ECP) · Ishikawa · cinq pourquoi · diagramme des affinités · multi-vote · analyse des contraintes · analyse des modes de défaillance · matrice RACI
+
+> Projet réalisé en milieu professionnel. Cette page décrit la démarche et les indicateurs de processus ; aucune donnée interne, aucun document source et aucune information nominative n'y sont reproduits.
