@@ -1,0 +1,47 @@
+---
+title: "Assistant conversationnel sur les politiques internes"
+publishedAt: "2026-01-15"
+summary: "Agent conversationnel bâti sur Microsoft Foundry, qui répond en langage naturel aux questions des employés sur les règlements et politiques, en citant systématiquement le document et l'article concernés."
+images:
+  - "/PortfolioBmc/images/projets/assistant-politiques.png"
+tag: "IA générative · Microsoft Foundry"
+---
+
+Les règlements et politiques d'une organisation sont écrits pour faire autorité, pas pour être parcourus. Un employé qui veut savoir à quel taux son déplacement est remboursé, ou quelle est la marche à suivre face à un comportement incivil, doit identifier le bon document, puis le bon article. La réponse existe, mais le coût pour l'atteindre décourage la recherche — et l'on finit par demander à un collègue, qui répondra de mémoire.
+
+J'ai conçu un **agent conversationnel** qui répond à ces questions en langage naturel, sur **Microsoft Foundry**.
+
+<div style={{display:'flex',gap:'16px',flexWrap:'wrap',alignItems:'flex-start',marginTop:'1rem',marginBottom:'1rem'}}>
+  <img src="/PortfolioBmc/images/projets/assistant-politiques.png" alt="Interface écrite de l'assistant : son domaine de couverture et trois questions suggérées en langage courant" style={{flex:'1 1 300px',minWidth:0,borderRadius:12,border:'1px solid rgba(0,0,0,0.12)'}} />
+  <img src="/PortfolioBmc/images/projets/assistant-politiques-voix.png" alt="Interface vocale de l'assistant : les mêmes questions suggérées, un sélecteur de voix et un bouton pour démarrer la session" style={{flex:'1 1 300px',minWidth:0,borderRadius:12,border:'1px solid rgba(0,0,0,0.12)'}} />
+</div>
+
+## Citer la source, toujours
+
+C'est le choix de conception qui structure tout le reste : **l'assistant ne répond jamais sans indiquer le règlement et l'article dont provient sa réponse.**
+
+Sur un corpus réglementaire, une réponse sans source ne vaut rien. L'employé doit pouvoir vérifier, et surtout pouvoir s'appuyer sur le texte officiel s'il doit justifier une décision. La citation transforme l'assistant : il cesse d'être une réponse à croire pour devenir un raccourci vers la source.
+
+C'est aussi la meilleure protection contre l'erreur. Un modèle de langage peut se tromper ; une réponse citée est vérifiable en un clic.
+
+## Deux façons de l'interroger
+
+Les deux captures ci-dessus montrent les deux interfaces. À gauche, la **conversation écrite**, pour les questions posées depuis un poste de travail. À droite, le **mode vocal**, où l'employé formule sa question à voix haute et reçoit une réponse parlée — utile pour quelqu'un qui n'est pas devant un écran, en déplacement ou les mains occupées.
+
+Les deux partagent le même corpus et la même logique de citation.
+
+## Couverture
+
+L'assistant couvre les domaines qui génèrent le plus de questions au quotidien : frais de déplacement, civilité et respect au travail, éthique, contrats, gestion documentaire et admission des élèves.
+
+Les questions suggérées à l'ouverture ne sont pas décoratives : elles montrent à l'employé le registre attendu. Une question formulée comme on la poserait à un collègue — « combien me rembourse-t-on par kilomètre ? » — plutôt qu'une requête par mots-clés.
+
+## Dire que l'IA peut se tromper
+
+L'interface affiche en permanence que le contenu généré peut être incorrect. Sur un sujet réglementaire, où une réponse erronée peut mener quelqu'un à enfreindre une règle de bonne foi, cet avertissement n'est pas une formalité : c'est ce qui maintient l'assistant à sa place, celle d'un outil d'orientation vers le texte officiel, et non d'une autorité qui se substituerait à lui.
+
+---
+
+**Technologies :** Microsoft Foundry · agent conversationnel · recherche documentaire augmentée · interface texte et vocale
+
+> Projet réalisé en milieu professionnel. La capture montre l'interface d'accueil : aucun extrait de politique, aucune réponse générée et aucun document interne n'y figurent.

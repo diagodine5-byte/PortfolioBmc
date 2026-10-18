@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Baba Mamadou",
   lastName: "Camara",
   name: `Baba Mamadou Camara`,
-  role: "Analyste de données",
+  role: "Analyste de données & TI",
   avatar: "/PortfolioBmc/images/avatar.jpg",
   email: "diagodine5@gmail.com",
   location: "America/Montreal", // IANA tz valide — Lévis (QC), heure de l'Est
@@ -33,8 +33,16 @@ const home: Home = {
   image: "/PortfolioBmc/images/avatar.jpg",
   label: "Accueil",
   title: `${person.name} — ${person.role}`,
-  description: `Portfolio de ${person.name}, ${person.role} : Power BI, SQL, modélisation de données et amélioration des processus.`,
-  headline: <>Des tableaux de bord que vos équipes utilisent vraiment</>,
+  description: `Portfolio de ${person.name}, ${person.role} : Power BI, SQL, IA appliquée et Lean Six Sigma.`,
+  headline: (
+    <>
+      Analyste de données &amp; TI
+      <br />
+      <Text variant="heading-default-xl" onBackground="neutral-weak">
+        Power BI · SQL · IA appliquée · Lean Six Sigma
+      </Text>
+    </>
+  ),
   // Réactiver une fois un premier rapport publié, en pointant href vers son slug.
   featured: {
     display: false,
@@ -51,8 +59,8 @@ const home: Home = {
   },
   subline: (
     <>
-      Je suis {person.firstName}, {person.role.toLowerCase()}. Je transforme des données opérationnelles <br /> en
-      tableaux de bord et en processus mesurables.
+      Je transforme les données opérationnelles en décisions et en processus plus efficaces, <br /> du modèle de
+      données jusqu'à l'agent IA.
     </>
   ),
 };
@@ -78,12 +86,22 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Analyste de données bilingue avec plus de deux ans d'expérience en intelligence d'affaires, modélisation de
-        données et amélioration de processus au sein d'un centre de services scolaire. Spécialisé en Power BI, SQL et
-        DAX, avec une réalisation phare : un projet Lean Six Sigma (Ceinture verte) ayant réduit de 55 % la file
-        d'attente des réparations et ramené le délai moyen à 20 jours. {person.firstName} transforme des données brutes
-        en tableaux de bord décisionnels et en recommandations concrètes. Basé à Lévis (QC), actuellement en démarche de
-        relocalisation vers l'Ontario.
+        <p>
+          Analyste de données et TI au Centre de services scolaire des Navigateurs (Lévis, QC), je travaille à la
+          jonction entre les données, les systèmes et les processus. Administrateur du système ITSM C2Atom et
+          gestionnaire des billets du service, j'exploite ses données pour bâtir des rapports Power BI qui appuient la
+          direction, notamment un modèle en étoile de 17 tables publié dans Power BI Service.
+        </p>
+        <p>
+          Certifié Green Belt Lean Six Sigma, j'utilise les données pour mesurer et réduire concrètement les délais,
+          comme dans mon projet de réduction de la durée de réparation des Chromebooks. J'ai aussi pris en charge des
+          processus techniques critiques, comme le pipeline d'import automatisé des employés dans C2Atom (Active
+          Directory, système de paie, SQL Server, PowerShell, API).
+        </p>
+        <p>
+          Je me spécialise maintenant en IA appliquée : j'ai conçu un agent IA dans Microsoft Foundry, capable de
+          répondre aux questions des employés sur les règlements en citant le document et l'article concernés.
+        </p>
       </>
     ),
   },
@@ -139,9 +157,14 @@ const about: About = {
     title: "Certifications",
     items: [
       {
-        name: "Lean Six Sigma — Ceinture verte",
+        name: "Lean Six Sigma — Green Belt",
         issuer: "Edgenda",
         date: "2025",
+      },
+      {
+        name: "Microsoft Azure AI Fundamentals (AI-901)",
+        issuer: "Microsoft",
+        date: "En cours",
       },
     ],
   },
@@ -150,34 +173,43 @@ const about: About = {
     title: "Compétences techniques",
     skills: [
       {
-        title: "Intelligence d'affaires",
+        title: "Données et BI",
+        description: (
+          <>Power BI (modélisation en étoile, DAX, Power BI Service), SQL / SQL Server, modélisation de données.</>
+        ),
+        tags: [],
+        images: [],
+      },
+      {
+        title: "IA",
         description: (
           <>
-            Power BI (Desktop et Service), DAX (mesures, AVERAGEX), Power Query, publication et actualisation des
-            rapports.
+            Microsoft Foundry, agents IA, Azure AI, outils d'IA pour le développement (Codex, Claude Code).
           </>
         ),
         tags: [],
         images: [],
       },
       {
-        title: "Modélisation & bases de données",
+        title: "Automatisation et systèmes",
         description: (
-          <>
-            Schéma en étoile, normalisation, conception de modèles multi-tables. SQL Server, requêtes SQL, entreposage
-            de données, sécurité des bases de données.
-          </>
+          <>PowerShell, intégration par API, planification de tâches, Active Directory.</>
         ),
         tags: [],
         images: [],
       },
       {
-        title: "Amélioration des processus & outils",
+        title: "Amélioration continue",
         description: (
-          <>
-            Lean Six Sigma Ceinture verte, méthodologie DMAIIC, indicateurs de performance (KPI). Microsoft Fabric,
-            C2Atom (ITSM), Excel avancé, Python (Pandas — notions).
-          </>
+          <>Lean Six Sigma (Green Belt), méthodologie DMAIIC, analyse de processus, réduction des délais.</>
+        ),
+        tags: [],
+        images: [],
+      },
+      {
+        title: "Gestion des services TI",
+        description: (
+          <>Administration ITSM (C2Atom), gestion de parc (Chromebooks, iPads, MacBooks).</>
         ),
         tags: [],
         images: [],
