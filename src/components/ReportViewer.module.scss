@@ -6,7 +6,7 @@
 }
 
 .nav {
-  flex: 0 0 236px;
+  flex: 0 0 196px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -21,14 +21,15 @@
 .item {
   display: flex;
   align-items: stretch;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
   text-align: left;
-  padding: 10px 12px;
+  padding: 9px 10px;
   border-radius: 8px;
   cursor: pointer;
   font: inherit;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
+  line-height: 1.3;
   color: inherit;
   background: transparent;
   border: 1px solid var(--neutral-alpha-weak);
@@ -63,8 +64,8 @@
   border: 1px solid var(--neutral-alpha-medium);
 }
 
-/* Sous cette largeur, la navigation passe au-dessus de la capture. */
-@media (max-width: 720px) {
+/* La navigation ne passe au-dessus que sur les tres petits ecrans. */
+@media (max-width: 520px) {
   .viewer {
     flex-direction: column;
   }
