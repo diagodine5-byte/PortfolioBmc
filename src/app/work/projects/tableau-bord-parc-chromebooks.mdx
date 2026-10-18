@@ -11,7 +11,16 @@ Un parc de plusieurs milliers d'appareils scolaires génère un flux continu de 
 
 J'ai conçu le modèle de données et le rapport Power BI qui ont rendu ce processus observable.
 
-<img src="/PortfolioBmc/images/projets/tableau-bord-reparations.svg" alt="Reconstitution anonymisée du rapport : le panneau des cinq pages à gauche, et la page Vue d'ensemble à droite avec ses quatre indicateurs, ses deux graphiques et ses segments" style={{width:'100%',borderRadius:12,marginTop:'1rem',marginBottom:'1rem'}} />
+<ReportViewer
+  note="Les noms d'établissements et les numéros de billets sont masqués : ce sont des données internes. Tout le reste est le rapport tel qu'il est utilisé."
+  pages={[
+    { label: "Vue d'ensemble", src: "/PortfolioBmc/images/projets/rapport/1-vue-ensemble.png", alt: "Vue d'ensemble : volumes, délai moyen, délai maximal, répartition par marque et par établissement" },
+    { label: "Pièces brisées", src: "/PortfolioBmc/images/projets/rapport/2-pieces-brisees.png", alt: "Pièces brisées : volumes par pièce et répartition par catégorie" },
+    { label: "Pièces brisées par modèle", src: "/PortfolioBmc/images/projets/rapport/3-par-modele.png", alt: "Matrice pièce par famille de modèle, en mise en forme conditionnelle" },
+    { label: "Pièces brisées par établissement", src: "/PortfolioBmc/images/projets/rapport/4-par-etablissement.png", alt: "Matrice des pièces par établissement, noms masqués" },
+    { label: "Délais de réparation", src: "/PortfolioBmc/images/projets/rapport/5-delais.png", alt: "Délais : durée par modèle, évolution dans le temps et palmarès des billets les plus longs" },
+  ]}
+/>
 
 ## Le modèle
 

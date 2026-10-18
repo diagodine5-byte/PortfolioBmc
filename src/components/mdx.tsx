@@ -1,5 +1,6 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import { ReportViewer } from "@/components/ReportViewer";
 import React, { ReactNode } from "react";
 import { slugify as transliterate } from "transliteration";
 
@@ -203,6 +204,7 @@ const components = {
   Icon,
   Media,
   SmartLink,
+  ReportViewer,
 };
 
 type CustomMDXProps = MDXRemoteProps & {

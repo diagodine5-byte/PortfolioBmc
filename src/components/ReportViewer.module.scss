@@ -1,0 +1,76 @@
+.viewer {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.nav {
+  flex: 0 0 236px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.stage {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.item {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.875rem;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--neutral-alpha-weak);
+  transition: background 120ms ease, border-color 120ms ease;
+
+  &:hover {
+    background: var(--neutral-alpha-weak);
+  }
+
+  &.active {
+    font-weight: 600;
+    background: var(--brand-alpha-weak);
+    border-color: var(--brand-alpha-medium);
+  }
+}
+
+.marker {
+  width: 3px;
+  border-radius: 2px;
+  background: transparent;
+  flex: 0 0 3px;
+
+  .active & {
+    background: var(--brand-background-strong);
+  }
+}
+
+.shot {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--neutral-alpha-medium);
+}
+
+/* Sous cette largeur, la navigation passe au-dessus de la capture. */
+@media (max-width: 720px) {
+  .viewer {
+    flex-direction: column;
+  }
+
+  .nav {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
