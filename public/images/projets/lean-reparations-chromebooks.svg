@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="1200" height="860" role="img" aria-label="Le flux de réparation passe de sept à cinq étapes après suppression de deux attentes, portant l'efficience du processus de 0,45 % à 8 %">
   <defs>
     <style>
-      .bg    { fill: #0E1B2A; }
-      .ttl   { fill: #E8F0FA; font: 700 30px Helvetica, Arial, sans-serif; }
-      .sub   { fill: #7E93AB; font: 400 17px Helvetica, Arial, sans-serif; }
-      .tagB  { fill: #7E93AB; font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 1.4px; }
-      .tagA  { fill: #8FD0A8; font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 1.4px; }
-      .box   { fill: #16293D; stroke: #2B4761; stroke-width: 2; }
-      .waste { fill: #3A1F2B; stroke: #C96A80; stroke-width: 2; }
-      .keep  { fill: #152F3A; stroke: #8FD0A8; stroke-width: 2; }
-      .t     { fill: #BBCBDD; font: 400 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .tw    { fill: #F2C9D3; font: 600 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .tk    { fill: #CDEBD9; font: 400 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .arr   { stroke: #2B4761; stroke-width: 2; }
-      .gain  { stroke: #8FD0A8; stroke-width: 2; stroke-dasharray: 6 5; }
-      .gainT { fill: #8FD0A8; font: 600 15px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .sep   { stroke: #2B4761; stroke-width: 2; }
-      .th    { fill: #7E93AB; font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 1.2px; }
-      .rl    { fill: #BBCBDD; font: 400 15px Helvetica, Arial, sans-serif; }
-      .rb    { fill: #9DB2C8; font: 400 15px Helvetica, Arial, sans-serif; }
-      .ra    { fill: #E8F0FA; font: 700 15px Helvetica, Arial, sans-serif; }
-      .rh    { fill: #8FD0A8; font: 700 15px Helvetica, Arial, sans-serif; }
-      .rowl  { stroke: #1E344B; stroke-width: 1.5; }
+      .bg    { fill: #FFFFFF; stroke: #DCE6F0; stroke-width: 2; }
+      .ttl   { fill: #10243A; font: 700 30px Helvetica, Arial, sans-serif; }
+      .sub   { fill: #5E7389; font: 400 17px Helvetica, Arial, sans-serif; }
+      .tagB  { fill: #6B8099; font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 1.4px; }
+      .tagA  { fill: #2E7D54; font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 1.4px; }
+      .box   { fill: #F5F9FD; stroke: #CFDDEB; stroke-width: 2; }
+      .waste { fill: #FDEEF1; stroke: #D98098; stroke-width: 2; }
+      .keep  { fill: #EDF8F2; stroke: #6FBF95; stroke-width: 2; }
+      .t     { fill: #2C4257; font: 400 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .tw    { fill: #9B3A52; font: 600 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .tk    { fill: #1F6B45; font: 400 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .arr   { stroke: #C3D3E3; stroke-width: 2; }
+      .gain  { stroke: #3C9A6B; stroke-width: 2; stroke-dasharray: 6 5; }
+      .gainT { fill: #2E7D54; font: 600 15px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .sep   { stroke: #DCE6F0; stroke-width: 2; }
+      .th    { fill: #6B8099; font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 1.2px; }
+      .rl    { fill: #2C4257; font: 400 15px Helvetica, Arial, sans-serif; }
+      .rb    { fill: #5E7389; font: 400 15px Helvetica, Arial, sans-serif; }
+      .ra    { fill: #10243A; font: 700 15px Helvetica, Arial, sans-serif; }
+      .rh    { fill: #2E7D54; font: 700 15px Helvetica, Arial, sans-serif; }
+      .rowl  { stroke: #E6EEF6; stroke-width: 1.5; }
     </style>
   </defs>
 
-  <rect class="bg" width="1200" height="860" rx="16" />
+  <rect class="bg" x="1" y="1" width="1198" height="858" rx="16" />
 
   <text class="ttl" x="60" y="58">Éliminer l'attente plutôt qu'accélérer le travail</text>
   <text class="sub" x="60" y="90">Projet Ceinture verte Lean Six Sigma · réparation de Chromebooks · méthodologie DMAIIC</text>

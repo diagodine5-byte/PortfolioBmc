@@ -1,34 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-label="Reconstitution anonymisée du rapport : panneau des cinq pages à gauche, et page Vue d'ensemble à droite avec quatre indicateurs, deux graphiques et des segments">
   <defs>
     <style>
-      .bg    { fill: #0E1B2A; }
-      .ttl   { fill: #E8F0FA; font: 700 27px Helvetica, Arial, sans-serif; }
-      .sub   { fill: #7E93AB; font: 400 14px Helvetica, Arial, sans-serif; }
-      .rail  { fill: #132434; stroke: #2B4761; stroke-width: 2; }
-      .navH  { fill: #7E93AB; font: 700 11px Helvetica, Arial, sans-serif; letter-spacing: 1.3px; }
-      .navI  { fill: #16293D; }
-      .navA  { fill: #1C3F60; }
-      .navT  { fill: #9DB2C8; font: 400 13px Helvetica, Arial, sans-serif; }
-      .navTA { fill: #E8F0FA; font: 700 13px Helvetica, Arial, sans-serif; }
-      .bar5  { fill: #5BA8F5; }
-      .card  { fill: #16293D; stroke: #2B4761; stroke-width: 2; }
-      .panel { fill: #132434; stroke: #2B4761; stroke-width: 2; }
-      .klab  { fill: #7E93AB; font: 400 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .kval  { fill: #E8F0FA; font: 700 28px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .kacc  { fill: #5BA8F5; font: 700 28px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .kgrn  { fill: #8FD0A8; font: 700 28px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .kwrn  { fill: #E8A34D; font: 700 28px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .ptit  { fill: #BBCBDD; font: 600 14px Helvetica, Arial, sans-serif; }
-      .blab  { fill: #9DB2C8; font: 400 11px Helvetica, Arial, sans-serif; text-anchor: end; }
-      .xlab  { fill: #7E93AB; font: 400 9.5px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .axis  { stroke: #2B4761; stroke-width: 1.5; }
-      .chipR { fill: #1C3650; stroke: #2B4761; stroke-width: 1.5; }
-      .chipT { fill: #BBCBDD; font: 600 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
-      .slab  { fill: #7E93AB; font: 600 10.5px Helvetica, Arial, sans-serif; letter-spacing: 1.1px; }
+      .bg    { fill: #FFFFFF; stroke: #DCE6F0; stroke-width: 2; }
+      .ttl   { fill: #10243A; font: 700 27px Helvetica, Arial, sans-serif; }
+      .sub   { fill: #5E7389; font: 400 14px Helvetica, Arial, sans-serif; }
+      .rail  { fill: #F5F9FD; stroke: #DCE6F0; stroke-width: 2; }
+      .navH  { fill: #6B8099; font: 700 11px Helvetica, Arial, sans-serif; letter-spacing: 1.3px; }
+      .navI  { fill: #FFFFFF; stroke: #E6EEF6; stroke-width: 1.5; }
+      .navA  { fill: #E3F0FC; stroke: #A8CDEE; stroke-width: 1.5; }
+      .navT  { fill: #4A6076; font: 400 13px Helvetica, Arial, sans-serif; }
+      .navTA { fill: #10243A; font: 700 13px Helvetica, Arial, sans-serif; }
+      .bar5  { fill: #1F6FB8; }
+      .card  { fill: #F7FBFF; stroke: #DCE6F0; stroke-width: 2; }
+      .panel { fill: #F7FBFF; stroke: #DCE6F0; stroke-width: 2; }
+      .klab  { fill: #6B8099; font: 400 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .kval  { fill: #10243A; font: 700 28px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .kacc  { fill: #1F6FB8; font: 700 28px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .kgrn  { fill: #2E7D54; font: 700 28px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .kwrn  { fill: #C2761E; font: 700 28px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .ptit  { fill: #2C4257; font: 600 14px Helvetica, Arial, sans-serif; }
+      .blab  { fill: #5E7389; font: 400 11px Helvetica, Arial, sans-serif; text-anchor: end; }
+      .xlab  { fill: #7A8EA3; font: 400 9.5px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .axis  { stroke: #CFDDEB; stroke-width: 1.5; }
+      .chipR { fill: #FFFFFF; stroke: #CFDDEB; stroke-width: 1.5; }
+      .chipT { fill: #2C4257; font: 600 12px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .slab  { fill: #6B8099; font: 600 10.5px Helvetica, Arial, sans-serif; letter-spacing: 1.1px; }
     </style>
   </defs>
 
-  <rect class="bg" width="1200" height="700" rx="16" />
+  <rect class="bg" x="1" y="1" width="1198" height="698" rx="16" />
 
   <text class="ttl" x="60" y="46">Rapport de suivi des réparations — cinq pages</text>
   <text class="sub" x="60" y="72">Reconstitution anonymisée · établissements et marques masqués, valeurs illustratives</text>
@@ -80,22 +80,22 @@
   <text class="ptit" x="334" y="254">Billets par marque</text>
 
   <text class="blab" x="390" y="300">Marque A</text>
-  <rect x="400" y="286" width="290" height="18" rx="3" fill="#5BA8F5" />
+  <rect x="400" y="286" width="290" height="18" rx="3" fill="#2E86D9" />
 
   <text class="blab" x="390" y="332">Autre</text>
-  <rect x="400" y="318" width="97" height="18" rx="3" fill="#7FC4FF" />
+  <rect x="400" y="318" width="97" height="18" rx="3" fill="#7FB9EE" />
 
   <text class="blab" x="390" y="364">Marque B</text>
-  <rect x="400" y="350" width="89" height="18" rx="3" fill="#8FD0A8" />
+  <rect x="400" y="350" width="89" height="18" rx="3" fill="#3C9A6B" />
 
   <text class="blab" x="390" y="396">Marque C</text>
-  <rect x="400" y="382" width="24" height="18" rx="3" fill="#E8A34D" />
+  <rect x="400" y="382" width="24" height="18" rx="3" fill="#D98C2B" />
 
   <text class="blab" x="390" y="428">Marque D</text>
-  <rect x="400" y="414" width="22" height="18" rx="3" fill="#C96A80" />
+  <rect x="400" y="414" width="22" height="18" rx="3" fill="#C4566E" />
 
   <text class="blab" x="390" y="460">Marque E</text>
-  <rect x="400" y="446" width="13" height="18" rx="3" fill="#B07FD0" />
+  <rect x="400" y="446" width="13" height="18" rx="3" fill="#9B6FD0" />
 
   <line class="axis" x1="400" y1="476" x2="690" y2="476" />
   <text class="xlab" x="400" y="492">0</text>
@@ -106,18 +106,18 @@
   <rect class="panel" x="734" y="226" width="406" height="296" rx="12" />
   <text class="ptit" x="756" y="254">Billets par établissement</text>
 
-  <rect x="762"  y="304" width="22" height="160" rx="3" fill="#9B8BE0" />
-  <rect x="792"  y="363" width="22" height="101" rx="3" fill="#9B8BE0" />
-  <rect x="822"  y="365" width="22" height="99"  rx="3" fill="#9B8BE0" />
-  <rect x="852"  y="374" width="22" height="90"  rx="3" fill="#9B8BE0" />
-  <rect x="882"  y="379" width="22" height="85"  rx="3" fill="#9B8BE0" />
-  <rect x="912"  y="427" width="22" height="37"  rx="3" fill="#9B8BE0" />
-  <rect x="942"  y="430" width="22" height="34"  rx="3" fill="#9B8BE0" />
-  <rect x="972"  y="432" width="22" height="32"  rx="3" fill="#9B8BE0" />
-  <rect x="1002" y="444" width="22" height="20"  rx="3" fill="#9B8BE0" />
-  <rect x="1032" y="446" width="22" height="18"  rx="3" fill="#9B8BE0" />
-  <rect x="1062" y="447" width="22" height="17"  rx="3" fill="#9B8BE0" />
-  <rect x="1092" y="449" width="22" height="15"  rx="3" fill="#9B8BE0" />
+  <rect x="762"  y="304" width="22" height="160" rx="3" fill="#8B74D4" />
+  <rect x="792"  y="363" width="22" height="101" rx="3" fill="#8B74D4" />
+  <rect x="822"  y="365" width="22" height="99"  rx="3" fill="#8B74D4" />
+  <rect x="852"  y="374" width="22" height="90"  rx="3" fill="#8B74D4" />
+  <rect x="882"  y="379" width="22" height="85"  rx="3" fill="#8B74D4" />
+  <rect x="912"  y="427" width="22" height="37"  rx="3" fill="#8B74D4" />
+  <rect x="942"  y="430" width="22" height="34"  rx="3" fill="#8B74D4" />
+  <rect x="972"  y="432" width="22" height="32"  rx="3" fill="#8B74D4" />
+  <rect x="1002" y="444" width="22" height="20"  rx="3" fill="#8B74D4" />
+  <rect x="1032" y="446" width="22" height="18"  rx="3" fill="#8B74D4" />
+  <rect x="1062" y="447" width="22" height="17"  rx="3" fill="#8B74D4" />
+  <rect x="1092" y="449" width="22" height="15"  rx="3" fill="#8B74D4" />
 
   <line class="axis" x1="752" y1="464" x2="1122" y2="464" />
   <text class="xlab" x="773"  y="480">1</text>

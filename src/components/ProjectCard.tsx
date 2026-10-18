@@ -49,9 +49,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         {title && (
           <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
-            </Heading>
+            {/* Le titre mène à la page du projet, comme « Voir le projet ». */}
+            <SmartLink
+              href={href}
+              style={{ textDecoration: "none", color: "inherit", width: "fit-content" }}
+            >
+              <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+                {title}
+              </Heading>
+            </SmartLink>
           </Flex>
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (

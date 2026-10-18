@@ -8,7 +8,8 @@ const person: Person = {
   role: "Analyste de données & TI",
   avatar: "/PortfolioBmc/images/avatar.jpg",
   email: "diagodine5@gmail.com",
-  location: "America/Montreal", // IANA tz valide — Lévis (QC), heure de l'Est
+  location: "America/Montreal", // fuseau IANA, utilisé par l'horloge du bandeau
+  locationLabel: "Québec, Canada",
   languages: ["Français", "Anglais"],
   locale: "fr",
 };
